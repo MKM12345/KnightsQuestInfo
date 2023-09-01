@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="root/style.css">
-    <title>Home - KnightQuest Game</title>
+    <title>Pygame Tutorial</title>
+    <link rel="stylesheet" href="style.css"> <!-- Include your CSS file here -->
 </head>
 <body>
     <header>
@@ -19,11 +19,41 @@
     </header>
 
     <section id="home">
-        <h1>Welcome to KnightQuest</h1>
-        <p>Embark on an epic adventure as a valiant knight in the KnightQuest game!</p>
+        <p>Hey, this game was made possible through pygame and pygame zero. </p>
     </section>
 
-    <!-- Your home page content goes here -->
+    <section id="tutorial">
+        <h2>Step 1: Install Pygame</h2>
+        <p>Before you can start using Pygame, you need to install it. Open your terminal (command prompt on Windows) and run the following command to install Pygame using pip, Python's package manager:</p>
+        <pre><code>pip install pygame</code></pre>
 
+        <h2>Step 2: Import Pygame</h2>
+        <p>Create a Python script (e.g., <code>game.py</code>) and open it in your favorite code editor. Start by importing the Pygame library:</p>
+        <pre><code>import pygame</code></pre>
+
+        <h2>Step 3: Initialize Pygame</h2>
+        <p>Before you can use Pygame features, you need to initialize it:</p>
+        <pre><code>pygame.init()</code></pre>
+
+        <!-- Continue with other steps -->
+
+        <h2>Step 6: Draw a Shape</h2>
+        <p>Now, let's draw a simple shape, like a red rectangle, on the screen. Add the following code inside the game loop:</p>
+        <pre><code>// Add game logic here
+screen.fill((0, 0, 0))  # Fill the screen with black
+
+# Draw a red rectangle (x, y, width, height)
+pygame.draw.rect(screen, (255, 0, 0), (100, 100, 50, 50))
+
+pygame.display.flip()</code></pre>
+
+        <h2>Step 7: Quit Pygame</h2>
+        <p>Finally, don't forget to quit Pygame when you're done:</p>
+        <pre><code>pygame.quit()</code></pre>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Pygame Tutorial</p>
+    </footer>
 </body>
 </html>
