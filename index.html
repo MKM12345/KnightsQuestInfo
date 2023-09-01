@@ -66,8 +66,11 @@ screen.fill((0, 0, 0))  # Fill the screen with black
 # Draw a red rectangle (x, y, width, height)
 pygame.draw.rect(screen, (255, 0, 0), (100, 100, 50, 50))
 
-pygame.display.flip()</code></pre>
-             <p>You're code should like this:</p>
+pygame.display.flip()</code></pre> 
+            <h2>Step 8: Quit Pygame</h2>
+            <p>Finally, don't forget to quit Pygame when you're done. Add this line outside the game loop:</p>
+            <pre><code>pygame.quit()</code></pre>
+                         <p>You're code should like this:</p>
             <pre><code>
                 import pygame
 
@@ -90,10 +93,6 @@ pygame.display.flip()</code></pre>
                 pygame.display.flip()
                 pygame.quit()
             </code></pre>
-
-            <h2>Step 8: Quit Pygame</h2>
-            <p>Finally, don't forget to quit Pygame when you're done. Add this line outside the game loop:</p>
-            <pre><code>pygame.quit()</code></pre>
         </section>
     </section>
     
