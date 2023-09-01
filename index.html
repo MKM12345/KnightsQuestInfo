@@ -67,50 +67,39 @@ screen.fill((0, 0, 0))  # Fill the screen with black
 pygame.draw.rect(screen, (255, 0, 0), (100, 100, 50, 50))
 
 pygame.display.flip()</code></pre>
+             <p>You're code should like this:</p>
+            <pre><code>
+                import pygame
+
+                pygame.init()
+ 
+                screen = pygame.display.set_mode((800, 600))
+
+                running = True
+                while running:
+                    for event in pygame.event.get():
+                        if event.type == pygame.QUIT:
+                        running = False
+                        quit()
+
+                screen.fill((0, 0, 0))  # Fill the screen with black
+
+                # Draw a red rectangle (x, y, width, height)
+                pygame.draw.rect(screen, (255, 0, 0), (100, 100, 50, 50))
+
+                pygame.display.flip()
+                pygame.quit()
+            </code></pre>
 
             <h2>Step 8: Quit Pygame</h2>
             <p>Finally, don't forget to quit Pygame when you're done. Add this line outside the game loop:</p>
             <pre><code>pygame.quit()</code></pre>
         </section>
     </section>
-
-    <!-- Add a game canvas section -->
-    <section id="game-canvas-section">
-        <canvas id="game-canvas" width="800" height="400"></canvas>
-    </section>
-
+    
     <footer>
         <p>&copy; 2023 MKM12345</p>
     </footer>
 
-    <script>
-        const canvas = document.getElementById("game-canvas");
-        const ctx = canvas.getContext("2d");
-
-        // Game variables
-        let x = 50; // Initial X position of the rectangle
-        const y = 250; // Y position of the rectangle
-        let isMoving = false;
-
-        // Function to update the game state
-        function updateGame() {
-            if (isMoving) {
-                // Clear the canvas
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-                // Draw a red rectangle at the current position
-                ctx.fillStyle = "#FF0000";
-                ctx.fillRect(x, y, 50, 50);
-            }
-        }
-
-        // Event listener for mouse click to start the game
-        canvas.addEventListener("click", () => {
-            if (!isMoving) {
-                isMoving = true;
-                updateGame();
-            }
-        });
-    </script>
 </body>
 </html>
