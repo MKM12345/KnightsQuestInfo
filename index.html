@@ -90,7 +90,6 @@ pygame.display.flip()</code></pre>
         // Game variables
         let x = 50; // Initial X position of the rectangle
         const y = 250; // Y position of the rectangle
-        const speed = 5; // Movement speed
         let isMoving = false;
 
         // Function to update the game state
@@ -102,12 +101,6 @@ pygame.display.flip()</code></pre>
                 // Draw a red rectangle at the current position
                 ctx.fillStyle = "#FF0000";
                 ctx.fillRect(x, y, 50, 50);
-
-                // Move the rectangle to the right
-                x += speed;
-
-                // Request the next frame
-                requestAnimationFrame(updateGame);
             }
         }
 
