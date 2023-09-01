@@ -19,33 +19,48 @@
     </header>
 
     <section id="home">
-        <p>Hey, this game was made possible through pygame and pygame zero. </p>
+        <p>Hey, this game was made possible through pygame and pygame zero.</p>
     </section>
 
-    <section id ="intro">
+    <section id="intro">
         <h1>About Pygame:</h1>
-        <p>Pygame is a popular Python library that is used to create 2D games and multimedia applications. It provides a set of modules and functions for game development, making it easier for developers to handle tasks like graphics rendering, sound playback, user input, and more. Pygame is built on top of the Simple DirectMedia Layer (SDL) library, which is a cross-platform development library designed to provide low-level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
-         
-           Pygame is commonly used by indie game developers, hobbyists, and educators due to its simplicity and ease of use. It provides a relatively straightforward way to create 2D games without the complexity of more advanced game engines. If you're interested in game development using Python, Pygame is a great choice to start with. Here is a simple tutorial:</p>
+        <p>Pygame is a popular Python library for creating 2D games and multimedia applications. It's widely used by indie game developers, hobbyists, and educators due to its simplicity and ease of use. Here's a step-by-step guide to get you started:</p>
 
-    <section id="tutorial">
-        <h2>Step 1: Install Pygame</h2>
-        <p>Before you can start using Pygame, you need to install it. Open your terminal (command prompt on Windows) and run the following command to install Pygame using pip, Python's package manager:</p>
-        <pre><code>pip install pygame</code></pre>
+        <section id="tutorial">
+            <h2>Step 1: Install Pygame</h2>
+            <p>To begin, you need to install Pygame. Open your terminal (command prompt on Windows) and run the following command:</p>
+            <pre><code>pip install pygame</code></pre>
 
-        <h2>Step 2: Import Pygame</h2>
-        <p>Create a Python script (e.g., <code>game.py</code>) and open it in your favorite code editor. Start by importing the Pygame library:</p>
-        <pre><code>import pygame</code></pre>
+            <h2>Step 2: Set Up Your Project</h2>
+            <p>Create a new folder for your game project. Inside this folder, create a Python script (e.g., <code>game.py</code>) and open it in your favorite code editor.</p>
 
-        <h2>Step 3: Initialize Pygame</h2>
-        <p>Before you can use Pygame features, you need to initialize it:</p>
-        <pre><code>pygame.init()</code></pre>
+            <h2>Step 3: Import Pygame</h2>
+            <p>In your <code>game.py</code> script, start by importing the Pygame library:</p>
+            <pre><code>import pygame</code></pre>
 
-        <!-- Continue with other steps -->
+            <h2>Step 4: Initialize Pygame</h2>
+            <p>Before you can use Pygame features, you need to initialize it. Add the following line to your script:</p>
+            <pre><code>pygame.init()</code></pre>
 
-        <h2>Step 6: Draw a Shape</h2>
-        <p>Now, let's draw a simple shape, like a red rectangle, on the screen. Add the following code inside the game loop:</p>
-        <pre><code>// Add game logic here
+            <h2>Step 5: Create a Game Window</h2>
+            <p>To create a window for your game, add the following code:</p>
+            <pre><code>screen = pygame.display.set_mode((800, 600))</code></pre>
+
+            <h2>Step 6: Main Game Loop</h2>
+            <p>Your game will run inside a main loop. Here's a basic structure for your loop:</p>
+            <pre><code>running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Add game logic and drawing code here
+
+pygame.quit()</code></pre>
+
+            <h2>Step 7: Draw a Shape</h2>
+            <p>Now, let's draw a simple shape, like a red rectangle, on the screen. Add the following code inside the game loop:</p>
+            <pre><code># Add game logic here
 screen.fill((0, 0, 0))  # Fill the screen with black
 
 # Draw a red rectangle (x, y, width, height)
@@ -53,11 +68,21 @@ pygame.draw.rect(screen, (255, 0, 0), (100, 100, 50, 50))
 
 pygame.display.flip()</code></pre>
 
-        <h2>Step 7: Quit Pygame</h2>
-        <p>Finally, don't forget to quit Pygame when you're done:</p>
-        <pre><code>pygame.quit()</code></pre>
+            <h2>Step 8: Quit Pygame</h2>
+            <p>Finally, don't forget to quit Pygame when you're done. Add this line outside the game loop:</p>
+            <pre><code>pygame.quit()</code></pre>
+        </section>
     </section>
+
+    <!-- Add a game canvas section -->
+    <section id="game-canvas-section">
+        <canvas id="game-canvas" width="800" height="400"></canvas>
     </section>
+
+    <footer>
+        <p>&copy; 2023 MKM12345</p>
+    </footer>
+
     <script>
         const canvas = document.getElementById("game-canvas");
         const ctx = canvas.getContext("2d");
@@ -94,9 +119,5 @@ pygame.display.flip()</code></pre>
             }
         });
     </script>
-
-    <footer>
-        <p>&copy; 2023 MKM12345</p>
-    </footer>
 </body>
 </html>
