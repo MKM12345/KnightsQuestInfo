@@ -51,6 +51,42 @@ pygame.display.flip()</code></pre>
         <p>Finally, don't forget to quit Pygame when you're done:</p>
         <pre><code>pygame.quit()</code></pre>
     </section>
+    <script>
+        const canvas = document.getElementById("game-canvas");
+        const ctx = canvas.getContext("2d");
+
+        // Game variables
+        let x = 50; // Initial X position of the rectangle
+        const y = 250; // Y position of the rectangle
+        const speed = 5; // Movement speed
+        let isMoving = false;
+
+        // Function to update the game state
+        function updateGame() {
+            if (isMoving) {
+                // Clear the canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Draw a red rectangle at the current position
+                ctx.fillStyle = "#FF0000";
+                ctx.fillRect(x, y, 50, 50);
+
+                // Move the rectangle to the right
+                x += speed;
+
+                // Request the next frame
+                requestAnimationFrame(updateGame);
+            }
+        }
+
+        // Event listener for mouse click to start the game
+        canvas.addEventListener("click", () => {
+            if (!isMoving) {
+                isMoving = true;
+                updateGame();
+            }
+        });
+    </script>
 
     <footer>
         <p>&copy; 2023 Pygame Tutorial</p>
