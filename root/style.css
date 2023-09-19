@@ -8,7 +8,6 @@ body, h1, h2, p, ul, li {
 body {
     background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
     font-family: 'Montserrat', sans-serif;
-    color: #fff;
     line-height: 1.6;
 }
 
