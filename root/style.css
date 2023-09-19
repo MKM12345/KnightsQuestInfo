@@ -4,82 +4,101 @@ body, h1, h2, p, ul, li {
     padding: 0;
 }
 
-/* Apply a background color to the body */
+/* Apply a beautiful background gradient to the body */
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
 }
 
-/* Style the header with the navigation bar */
+/* Style the header with a stunning gradient background */
 header {
-    background-color: #333;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Style the navigation bar with a sleek animation */
 nav ul {
     list-style-type: none;
+    text-align: center;
+    margin-top: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 30px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Style the main sections */
+nav ul li a:hover {
+    color: #2ecc71;
+}
+
+/* Style the main sections with a subtle gradient background */
 section {
-    padding: 20px;
-    background-color: #fff;
+    padding: 30px;
+    background: linear-gradient(180deg, #ffffff, #ecf0f1);
     margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Style the buttons */
+/* Style the buttons with a modern look */
 button {
-    background-color: #333;
+    background-color: #2ecc71;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #27ae60;
 }
 
-/* Style the footer */
+/* Style the footer with elegance */
 footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #333;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
     color: #fff;
+    border-top: 2px solid #fff;
 }
 
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
-    nav ul {
-        text-align: center;
-        padding-top: 10px;
-    }
-
     nav ul li {
         display: block;
-        margin-bottom: 10px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        transform: none;
     }
 
     header {
-        text-align: center;
+        padding: 15px 0;
     }
 
     section {
+        padding: 20px;
         margin: 10px;
     }
 }
